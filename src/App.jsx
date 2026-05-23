@@ -160,7 +160,7 @@ export default function App() {
             <section className="rise" key={active} style={{ ...card }}>
               <h2 style={h2()}>{d.title}</h2>
 
-              <div style={{ display: "grid", gridTemplateColumns: "minmax(270px, 1fr) minmax(290px, 1.15fr)", gap: 26 }}>
+              <div className="decision-grid">
                 {/* IZQUIERDA */}
                 <div>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
@@ -232,7 +232,7 @@ export default function App() {
                   {d.alternatives.map((a, ai) => (
                     <div key={ai} style={{ borderTop: "1px solid #f0ece2", padding: "11px 0" }}>
                       <div style={{ fontSize: 12.5, fontWeight: 600, marginBottom: 8 }}>{a.name}</div>
-                      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))", gap: "9px 18px" }}>
+                      <div className="scores-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))", gap: "9px 18px" }}>
                         {crits.map((c) => (
                           <div key={c}>
                             <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11.5, color: "var(--muted)", marginBottom: 3 }}>
